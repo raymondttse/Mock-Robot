@@ -213,7 +213,7 @@ class DriverInterface():
             #send pick, then place command as queue
             transfer_thread = threading.Thread(
                 target=self.ExecuteQueue, 
-                args=([['pick', parameterValues[i_src]], ['place', parameterValues[i_dst]]],))
+                args=([['pick', int(parameterValues[i_src])], ['place', int(parameterValues[i_dst])]],))
             transfer_thread.start()
             return '<SUCCESS> Transfer process initiated'
 
