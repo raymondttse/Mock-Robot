@@ -154,8 +154,8 @@ class DriverInterface():
 
         #collect values so easier to read
         pName1, pName2 = parameterNames[0], parameterNames[1]
-        pValue1 = int(parameterValues[0]) if parameterValues[0] != '' else parameterValues[0]
-        pValue2 = int(parameterValues[1]) if parameterValues[1] != '' else parameterValues[1]
+        pValue1 = int(parameterValues[0]) if parameterValues[0] != '' and parameterValues[0].isdigit() else parameterValues[0]
+        pValue2 = int(parameterValues[1]) if parameterValues[1] != '' and parameterValues[1].isdigit() else parameterValues[1]
 
         #check valid values from "scheduler program"
         if scheduler.check_valid_locs(parameterValues) != True:
