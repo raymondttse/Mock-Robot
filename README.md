@@ -12,3 +12,6 @@ Initialize takes 2 seconds instead of 2 minutes for testing\
 Pick takes 5 seconds instead of 5 minutes for testing\
 Place takes 5 seconds instead of 5 minutes for testing\
 Transfer takes 10 seconds as it is pick then place no matter the order it's entered
+
+Assume scheduler program gives list of valid locations:\
+1, 2, 3, 6, 12, 38, 80, 10, 20, 345
