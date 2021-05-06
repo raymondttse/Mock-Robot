@@ -139,10 +139,13 @@ class mockrobot_API():
     def moveRobot(self, op_time):
         '''
         Simulate robot move and interrupts/updates process status when driver aborts in progress
+        
+        Arguments:
+            op_time: int representing seconds for operation
         '''
         update_rate = 0.05
         timer = 0
-        while timer < op_time: #constantly check connection
+        while timer < op_time: #while timer is still ticking
             if self.main_addr == None: #if disconnected, give terminated error
                 self.currentStatusID = 103 
                 return #exit robot move
